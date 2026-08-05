@@ -1,0 +1,172 @@
+body{
+    color:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+
+    margin:0;
+}
+
+.container{
+    width:1100px;
+
+    margin:40px auto;
+}
+
+.anime-header{
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:flex-start;
+}
+
+.poster{
+
+    width:260px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+    flex-shrink:0;
+}
+
+.info{
+
+    flex:1;
+}
+
+.info h1{
+
+    margin-top:0;
+
+    margin-bottom:10px;
+
+    font-size:42px;
+}
+
+.romaji{
+
+    color:#a9a9a9;
+
+    font-size:20px;
+
+    margin-top:0;
+
+    margin-bottom:30px;
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+.stat{
+
+    background:#202020;
+
+    padding:15px;
+
+    border-radius:12px;
+}
+
+.stat-title{
+
+    color:#999;
+
+    font-size:14px;
+}
+
+.stat-value{
+
+    font-size:18px;
+
+    margin-top:5px;
+}
+
+.synopsis{
+
+    margin-top:40px;
+
+    background:#202020;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    line-height:1.8;
+}
+
+.synopsis h2{
+
+    margin-top:0;
+}
+
+a{
+
+    color:#58a6ff;
+
+    text-decoration:none;
+}
+
+a:hover{
+
+    text-decoration:underline;
+}
+
+button {
+    padding: 15px 28px;
+    
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: #6d4494;
+
+    color: #ffffff;
+}
+
+button:hover {
+    background: #7c53a5;
+}
+
+.actions{
+
+    margin-top:25px;
+
+    display:flex;
+}
+
+#favourite-btn{
+
+    padding:14px 30px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#6d4494;
+
+    color:white;
+
+    transition:.2s;
+}
+
+#favourite-btn:hover{
+
+    background:#7c53a5;
+
+    transform:translateY(-2px);
+}

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.hero {
+    text-align: center;
+}
+
+.favourites-link {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 64px;
+
+    margin-bottom: 10px;
+}
+
+.hero p{
+    color: #b8b8b8;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+input {
+    width: 420px;
+
+    padding: 15px 20px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+}
+
+button {
+    padding: 15px 28px;
+    
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: #6d4494;
+
+    color: #ffffff;
+}
+
+button:hover {
+    background: #7c53a5;
+}

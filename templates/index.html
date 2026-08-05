@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero">
+
+    <h1>Anime Tracker</h1>
+    <p>Search thousands of anime.</p>
+
+    <form action="/search" method="GET">
+        <input type="text" name="anime" placeholder="Search Anime">
+        <button type="submit">Search</button>
+    </form>
+    
+    <form action="/favourites" class="favourites-link">
+        <button type="submit">Favourites</button>
+    </form>
+</div>
+{% endblock %}

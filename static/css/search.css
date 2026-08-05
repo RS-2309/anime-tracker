@@ -1,0 +1,48 @@
+body{
+    background:#1b1b1b;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width:900px;
+    margin:auto;
+}
+
+.card{
+    display:flex;
+
+    gap:20px;
+
+    background:#2b2b2b;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+}
+
+.poster{
+    width:180px;
+    height:auto;
+
+    border-radius:10px;
+    flex-shrink:0;
+}
+
+.info{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+h2{
+    margin:0;
+}
+
+p{
+    color:#d0d0d0;
+}

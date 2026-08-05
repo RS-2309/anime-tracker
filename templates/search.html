@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/favourites.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+{% for anime in results %}
+
+<div class="card">
+
+    <form action="/anime/{{ anime['id'] }}">
+        <button type="submit">
+            <img
+                class="poster"
+                src="{{ anime.get('coverImage', {}).get('extraLarge') or anime.get('coverImage', {}).get('large') }}"
+            >
+        </button>
+    </form>
+
+    <div class="info">
+        
+        <h2>{{ anime["title"]["english"] }}</h2>
+        <p>{{ anime["title"]["romaji"] }}</p>
+        <p>{{ anime["format"] }} • {{ anime["episodes"] }} • {{ anime["seasonYear"] }}</p>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

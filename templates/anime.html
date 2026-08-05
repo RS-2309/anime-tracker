@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/anime.css') }}">
+<script src="{{ url_for('static', filename='js/anime.js') }}" defer></script>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <div class="anime-header">
+
+        <img class="poster"
+             src="{{ anime['coverImage'].get('extraLarge') or anime['coverImage'].get('large') }}">
+
+        <div class="info">
+
+            <h1>{{ anime["title"]["english"] }}</h1>
+
+            <p class="romaji">
+                {{ anime["title"]["romaji"] }}
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-title">⭐ Score</div>
+                    <div class="stat-value">
+                        {% if anime["averageScore"] %}
+                            {{ anime["averageScore"]/10 }}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title">🎬 Format</div>
+                    <div class="stat-value">
+                        {{ anime["format"] }}
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title">📺 Episodes</div>
+                    <div class="stat-value">
+                        {{ anime["episodes"] }}
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title">📅 Year</div>
+                    <div class="stat-value">
+                        {{ anime["seasonYear"] }}
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title">🏢 Studios</div>
+                    <div class="stat-value">
+                        {{ ", ".join(studioNames) }}
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title">🎭 Genres</div>
+                    <div class="stat-value">
+                        {{ ", ".join(anime["genres"]) }}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="synopsis">
+
+        <h2>Synopsis</h2>
+
+        <p>{{ anime["description"]|safe }}</p>
+
+    </div>
+
+    <div class="actions">
+
+        <button id="favourite-btn" data-id="{{ id }}">
+            {{ "Unfavourite" if is_favourite else "Favourite" }}
+        </button>
+
+    </div>
+
+</div>
+
+{% endblock %}

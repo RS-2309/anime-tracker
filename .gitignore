@@ -1,0 +1,10 @@
+.venv
+
+test_api.py
+
+__pycache__/
+*.pyc
+
+json/test.py
+
+.DS_Store
