@@ -1,6 +1,10 @@
 .venv
 
+Last_Did.txt
+
 test_api.py
+test_db.py
+nuke_db.py
 
 __pycache__/
 *.pyc
