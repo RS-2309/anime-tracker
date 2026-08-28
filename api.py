@@ -113,6 +113,11 @@ class Api:
         query = """
             query ($id: Int) {
                 Media (id: $id, type: ANIME) {
+
+                    title {
+                        english
+                    }
+                
                     genres
                     averageScore
                     format
@@ -157,6 +162,7 @@ class Api:
 
         data = [
             id,
+            mid_2["title"]["english"],
             json.dumps(mid_2["genres"]),
             mid_2["averageScore"],
             mid_2["format"],

@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS anime (
 
 CREATE TABLE IF NOT EXISTS favourites (
     id INTEGER PRIMARY KEY,
+    title TEXT,
     genre TEXT,
     score REAL,
     format TEXT,

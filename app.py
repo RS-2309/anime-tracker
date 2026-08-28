@@ -96,5 +96,22 @@ def filter(value):
     connection.close()
     return render_template('favourites_inter.html', favourites=favourites)
 
+@app.route("/favourites/sort/<value>")
+def sort(value):
+    connection = d.get_connected()
+    cursor = connection.cursor()
+
+    cursor.execute(
+        f'''SELECT * FROM favourites
+        ORDER BY {value};'''
+    )
+
+    output = cursor.fetchall()
+
+    favourites = [(data[0], Api.getAnime(data[0])[0]) for data in output]
+
+    connection.close()
+    return render_template('favourites_inter.html', favourites=favourites)
+
 if __name__ == "__main__":
     app.run(debug=True)

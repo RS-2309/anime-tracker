@@ -10,18 +10,29 @@
 <div class="container">
 
 <div class="controls">
-    <div class="control">
-        <label for="Filter">Filter By:</label>
+    <label for="Filter">Filter By:</label>
 
-        <select id="Filter">
-            <option value="All">All</option>
-            <option value="TV">TV</option>
-            <option value="MOVIE">Movie</option>
-            <option value="ONA">ONA</option>
-            <option value="OVA">OVA</option>
-            <option value="SPECIAL">Special</option>
-        </select>
-    </div>
+    <select id="Filter">
+        <option value="All">All</option>
+        <option value="TV">TV</option>
+        <option value="MOVIE">Movie</option>
+        <option value="ONA">ONA</option>
+        <option value="OVA">OVA</option>
+        <option value="SPECIAL">Special</option>
+    </select>
+
+    <label for="Sort">Sort:</label>
+
+    <select id="Sort">
+        <option value="title">Name(A-Z)</option>
+        <option value="title DESC">Name(Z-A)</option>
+        <option value="episodes">Episodes(Low to High)</option>
+        <option value="episodes DESC">Episodes(High to Low)</option>
+        <option value="score">Score(Low to High)</option>
+        <option value="score DESC">Score(High to Low)</option>
+        <option value="start">Release Year(Oldest to Newest)</option>
+        <option value="start DESC">Release Year(Newest to Oldest)</option>
+    </select>
 
 </div>
 

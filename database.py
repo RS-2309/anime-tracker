@@ -41,7 +41,7 @@ def add_favourite(id):
 
     cursor.execute(
         f'''INSERT INTO favourites
-        (id, genre, score, format, episodes, season, seasonYear, status, duration, source, isAdult, start, end, studio)
+        (id, title, genre, score, format, episodes, season, seasonYear, status, duration, source, isAdult, start, end, studio)
         VALUES ({placeholders});''',
         data
     )

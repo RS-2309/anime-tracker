@@ -6,9 +6,11 @@ test_api.py
 test_db.py
 nuke_db.py
 
+README_Old.md
+
 __pycache__/
 *.pyc
 
-json/test.py
+data/anime.db
 
 .DS_Store
